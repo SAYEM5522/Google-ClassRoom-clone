@@ -1,4 +1,7 @@
 import * as React from "react";
 export const Button = () => {
-  return <button>Boop</button>;
+  const onClick=React.useCallback(()=>{
+        console.log("click");
+  },[])
+  return <button onClick={onClick}>Boop</button>;
 };
