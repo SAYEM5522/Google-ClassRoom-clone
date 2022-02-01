@@ -1,0 +1,31 @@
+.header{
+  height: 58px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+  display: flex;
+}
+.header__left{
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  flex: 1;
+  margin-bottom: 4px;
+}
+.header__Icon{
+  margin-right: 14px;
+  color: black;
+}
+.header__left>p{
+  color: #5f6368;
+  font-family:'Product Sans',Arial, Helvetica, sans-serif;
+  font-size: 1.38125rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+   margin-left: 7px;
+}
+.header__right{
+margin-right: 20px;
+margin-bottom: 4px;
+}
