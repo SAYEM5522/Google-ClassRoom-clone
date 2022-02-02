@@ -29,3 +29,8 @@
 margin-right: 20px;
 margin-bottom: 4px;
 }
+.header__right>.Avator{
+  border-radius: 100px;
+  width: 45px;
+  height: 45px;
+}
