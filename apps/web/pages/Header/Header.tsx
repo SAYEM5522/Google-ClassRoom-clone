@@ -25,21 +25,28 @@ const Header = () => {
             
 
     />
-    <p>Classroom</p>
+    <p >Classroom</p>
     </div>
     <div className={styles.header__right}>
-      <AiOutlinePlus/>
-      <GrApps/>
+      <AiOutlinePlus size={21} style={{ marginRight:"1.9rem"}} />
+      <GrApps size={21} style={{ marginRight:"1.6rem"}} />
        
-      <div className={styles.Avator} >
+      {/* <div className={styles.Avator} > */}
       <Image 
        src="/../public/avator.jpg"
        alt="Google"
-       width={40}
-       height={40}
+       width={35}
+       height={35}
        objectFit='cover'
+       className='avatar'
       />
-      </div>
+          <style jsx global>{`
+        .avatar {
+          border-radius: 50% !important;
+          margin-right:7px;
+        }
+      `}</style>
+      {/* </div> */}
 
     </div>
 
