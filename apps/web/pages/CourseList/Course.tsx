@@ -3,12 +3,23 @@ import React from 'react';
 import { BiDotsVerticalRounded, BiFolder } from 'react-icons/bi';
 import { BsFillPersonBadgeFill } from 'react-icons/bs';
 import styles from "../css/CourseList/Course.module.css";
-const Course = () => {
+interface CourseProps {
+  course: {
+    id: number;
+    name: string;
+    faculty: string;
+    image: string;
+    section: string;
+    avatar: string;
+
+  }
+}
+const Course = ({course}:CourseProps) => {
   return <div className={styles.course}>
         <div className={styles.course__details}>
          <div className={styles.course__image}>
            <Image
-           src={"/../public/Honors.jpg"}
+           src={course.image}
            height={100}
            width={300}
            objectFit="cover"
@@ -17,15 +28,15 @@ const Course = () => {
            
            />
            <div className={styles.course__image__details}>
-           <h3 className={styles.course__image__name}>CSE 299 Spring 22</h3>
+           <h3 className={styles.course__image__name}>{course.name} <span className={styles.course__image__section__no}>{course.section}</span></h3>
            <BiDotsVerticalRounded className={styles.course__image__icon} size={24}/>
-          
            </div>
+           <p className={styles.course__image__faculty}>{course.faculty} </p>
        
            <div className={styles.course__avatar}>
              <div className={styles.course__profile}>
            <Image 
-                  src="/../public/avator.jpg"
+                  src={course.avatar}
                   alt="Google"
                   width={75}
                   height={75}

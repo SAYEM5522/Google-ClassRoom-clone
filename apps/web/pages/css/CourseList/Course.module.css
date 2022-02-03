@@ -12,6 +12,14 @@
     border-radius: 10px;
     position: relative;
 }
+.course__image__faculty{
+  position: absolute;
+  left: 15px;
+  top: 3.6rem;
+  font: 13px Roboto,Helvetica,Arial, sans-serif;
+  color: #fff;
+
+}
 .course__image {
   position: relative;
   border-radius: 10px;
@@ -23,12 +31,9 @@
   justify-content: space-between;
   top: -0.4rem;
   left: 15px;
-  
-
 }
 .course__image__icon{
 
-  margin-left: 3.2rem; 
   color: #fff;
 }
 .course__image__name{
@@ -38,9 +43,26 @@
   font-weight: 400;
   line-height: 1.75rem;
   color: #fff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  width:250px;
 
 }
+.course__image__section__no{
+  font-family: 'Google Sans',Roboto,Arial,sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: #fff;
+  position: absolute;
+  text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
 
+}
 .course__avatar{
   height: 137px;
   border-bottom: 1px solid lightgray;
