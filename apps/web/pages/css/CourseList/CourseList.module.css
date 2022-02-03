@@ -1,0 +1,7 @@
+.course__list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 25px;
+  margin-top: 10px;
+}

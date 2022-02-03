@@ -19,7 +19,7 @@ const Header = () => {
             alt="Google"
             width={imageWidth}
             height={imageHight}
-            priority={true}
+  
             objectFit="contain"
             objectPosition="center"
             
@@ -35,8 +35,8 @@ const Header = () => {
       <Image 
        src="/../public/avator.jpg"
        alt="Google"
-       width={35}
-       height={35}
+       width={30}
+       height={30}
        objectFit='cover'
        className='avatar'
       />

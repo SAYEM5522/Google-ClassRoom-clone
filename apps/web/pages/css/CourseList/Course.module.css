@@ -1,0 +1,13 @@
+.course{
+  display:flex;
+  align-items: center ;
+  margin-right: 1.5rem;
+  padding-bottom:1.6rem;
+
+}
+.course__details{
+    width: 300px;
+    height: 295px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
