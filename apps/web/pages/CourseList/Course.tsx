@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useCallback } from 'react';
 import { BiDotsVerticalRounded, BiFolder } from 'react-icons/bi';
 import { BsFillPersonBadgeFill } from 'react-icons/bs';
 import styles from "../css/CourseList/Course.module.css";
@@ -15,9 +16,14 @@ interface CourseProps {
   }
 }
 const Course = ({course}:CourseProps) => {
+  const router=useRouter()
+  const onClick:React.MouseEventHandler<HTMLDivElement>=()=>{
+    router.push("/Course/Class")
+  }
   return <div className={styles.course}>
         <div className={styles.course__details}>
-         <div className={styles.course__image}>
+         <div className={styles.course__image} >
+           <div onClick={onClick}>
            <Image
            src={course.image}
            height={100}
@@ -30,6 +36,7 @@ const Course = ({course}:CourseProps) => {
            <div className={styles.course__image__details}>
            <h3 className={styles.course__image__name}>{course.name} <span className={styles.course__image__section__no}>{course.section}</span></h3>
            <BiDotsVerticalRounded className={styles.course__image__icon} size={24}/>
+           </div>
            </div>
            <p className={styles.course__image__faculty}>{course.faculty} </p>
        
