@@ -3,6 +3,7 @@
   align-items: center ;
   margin-right: 1.5rem;
   padding-bottom:1.6rem;
+  cursor: pointer;
 
 }
 .course__details{
