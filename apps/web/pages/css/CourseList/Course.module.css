@@ -13,6 +13,11 @@
     border-radius: 10px;
     position: relative;
 }
+.course__details:hover{
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 15%) ;
+
+
+}
 .course__image__faculty{
   position: absolute;
   left: 15px;
@@ -51,12 +56,10 @@
   width:250px;
 
 }
-.course__image__name:hover{
+.course__image__name:hover,.course__image__section__no:hover,.course__image__faculty:hover{
   text-decoration: underline;
 }
-.course__image__section__no:hover{
-  text-decoration: underline;
-} 
+
 .course__image__section__no{
   font-family: 'Google Sans',Roboto,Arial,sans-serif;
   font-size: 0.8rem;
@@ -83,7 +86,7 @@
   
 }
 .course__bottom{
-    height: 57px;
+    /* height: 57px; */
     margin-left: 220px;
 
 }
