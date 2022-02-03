@@ -17,6 +17,7 @@
   margin-left: 15px;
   flex: 1;
   margin-bottom: 4px;
+  position: relative;
 }
 .header__Icon{
   margin-right: 14px;

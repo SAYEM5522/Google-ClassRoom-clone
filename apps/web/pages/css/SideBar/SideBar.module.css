@@ -1,0 +1,11 @@
+.sidebar{
+  position: absolute;
+  background-color:#FFFFFF;
+  width: 25%;
+  height: 100vw;
+  z-index: 1000;
+  border-right: 1px solid gray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  left: -15px;
+}
