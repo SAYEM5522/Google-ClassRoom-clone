@@ -1,0 +1,17 @@
+.headerMediumItem{
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.icon{
+  margin-right: 0.5rem;
+  color: #1a73e8;
+}
+.name{
+  color: #1a73e8;
+  letter-spacing: .0107142857em;
+    font-weight: 550;
+    text-transform: none;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: .875rem;
+}
