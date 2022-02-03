@@ -1,11 +1,13 @@
 .sidebar{
-  position: absolute;
-  background-color:#FFFFFF;
-  width: 25%;
-  height: 100vw;
-  z-index: 1000;
-  border-right: 1px solid gray;
   overflow-x: hidden;
-  overflow-y: scroll;
-  left: -15px;
+  overflow-y: scroll; 
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    background-color: #fff;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 19rem;
+    z-index: 990;
 }

@@ -14,7 +14,6 @@ const Header = () => {
   const router=useRouter()
   const onClick:React.MouseEventHandler<SVGElement>=()=>{
       setOpen(!open);
-      console.log(open);
   }
   
   return (

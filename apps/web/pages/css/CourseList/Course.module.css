@@ -51,6 +51,12 @@
   width:250px;
 
 }
+.course__image__name:hover{
+  text-decoration: underline;
+}
+.course__image__section__no:hover{
+  text-decoration: underline;
+} 
 .course__image__section__no{
   font-family: 'Google Sans',Roboto,Arial,sans-serif;
   font-size: 0.8rem;
@@ -62,6 +68,7 @@
     overflow: hidden;
     white-space: nowrap;
     display: block;
+    width:250px;
 
 }
 .course__avatar{
