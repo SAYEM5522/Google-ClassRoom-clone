@@ -4,3 +4,8 @@
   margin-right: auto;
   height: 100vw;
 }
+.classfeed__middle{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}

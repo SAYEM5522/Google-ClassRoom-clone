@@ -1,0 +1,7 @@
+.upcoming{
+  /* width: 196px; */
+  height: 124px;
+  border: 1px solid lightgray ;
+  border-radius: 7px;
+  flex: 0.19;
+}
