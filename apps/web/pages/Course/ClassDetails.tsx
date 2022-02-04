@@ -3,7 +3,7 @@ import styles from "../css/Course/ClassDetails.module.css"
 const ClassDetails = () => {
   return <div className={styles.classdetails}>
         <div className={styles.classdetails__name}>
-          <h1>CSE311.8 Spring</h1>
+          <h1>CSE311.8 Spring 2022</h1>
           <h4>8</h4>
         </div>
   </div>;
