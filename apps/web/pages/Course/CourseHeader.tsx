@@ -3,6 +3,21 @@ import styles from "../css/Course/CourseHeader.module.css";
 import { FiMenu } from "react-icons/fi";
 import Image from 'next/image';
 import { GrApps } from 'react-icons/gr';
+import ClassMiddle from './ClassMiddle';
+const list=[
+  {
+  id:'1',
+  name:"Stream"
+},
+{
+  id:'2',
+  name:"ClassWork"
+},
+{
+  id:'3',
+  name:"People"
+}
+]
 
 const CourseHeader = () => {
   return (
@@ -15,9 +30,13 @@ const CourseHeader = () => {
       </div>
     </div>
     <div className={styles.courseheader__middle}>
-      <p>Stream</p>
-      <p>ClassWork </p>
-      <p>People</p>
+    {
+      list.map((list,index)=>(
+        <ClassMiddle list={list} key={list.id}/>
+      )
+        
+      )
+    }
     </div>
     <div className={styles.courseheader__right}>
     <GrApps size={18} style={{ marginRight:"1.5rem"}} />

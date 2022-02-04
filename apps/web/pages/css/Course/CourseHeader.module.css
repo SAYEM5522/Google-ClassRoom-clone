@@ -46,16 +46,7 @@
   justify-content: center;
   
 }
-.courseheader__middle>p{
-  margin-right: 2.5rem;
-  letter-spacing: .01785714em;
-    font-family: 'Google Sans',Roboto,Arial,sans-serif;
-    font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    color: #3c4043;
-    text-transform: none;
-}
+
 .courseheader__right{
   display: flex;
   align-items: center;
