@@ -18,11 +18,9 @@ const CourseHeader = () => {
       <p>Stream</p>
       <p>ClassWork </p>
       <p>People</p>
-
-
     </div>
     <div className={styles.courseheader__right}>
-    <GrApps size={21} style={{ marginRight:"1.6rem"}} />
+    <GrApps size={18} style={{ marginRight:"1.5rem"}} />
        
        <Image 
         src="/../public/avator.jpg"
@@ -35,6 +33,7 @@ const CourseHeader = () => {
            <style jsx global>{`
          .avatar {
            border-radius: 50% !important;
+           margin-right:7px
            
          }
        `}</style>

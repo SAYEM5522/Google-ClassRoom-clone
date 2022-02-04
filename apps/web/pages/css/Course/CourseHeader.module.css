@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   margin-left: 20px;
-  margin-top: 10px;
+  flex: 0.3;
 }
 .courseheader__left__name{
   margin-left: 15px;
@@ -42,10 +42,24 @@
 .courseheader__middle{
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  flex: 0.4;
+  justify-content: center;
+  
+}
+.courseheader__middle>p{
+  margin-right: 2.2rem;
+  letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+    text-transform: none;
 }
 .courseheader__right{
   display: flex;
   align-items: center;
   margin-right: 25px;
+  flex: 0.3;
+  justify-content: flex-end;
 }
