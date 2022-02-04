@@ -1,8 +1,10 @@
 import React from 'react';
+import Header from '../Header/Header';
+import CourseHeader from './CourseHeader';
 
 const Class = () => {
   return <div>
-    <h1>Class</h1>
+    <CourseHeader/>
   </div>;
 };
 
