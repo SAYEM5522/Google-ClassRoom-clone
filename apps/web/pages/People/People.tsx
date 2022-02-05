@@ -1,8 +1,9 @@
 import React from 'react';
+import CourseHeader from '../Course/CourseHeader';
 
 const People = () => {
   return <div>
-    <h1>People</h1>
+   <CourseHeader/>
   </div>;
 };
 

@@ -1,8 +1,9 @@
 import React from 'react';
+import CourseHeader from '../Course/CourseHeader';
 
 const ClassWork = () => {
   return <div>
-    <h1>Classwork</h1>
+      <CourseHeader/>
   </div>;
 };
 
