@@ -18,7 +18,6 @@ const SIdeBar = ({setOpen}) => {
                 <CourseName/>
                 <CourseName/>
                 <CourseName/>
-
           </div>
 
   </div>;
