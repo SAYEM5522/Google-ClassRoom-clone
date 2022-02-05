@@ -1,10 +1,7 @@
 import React from 'react';
-
+import styles from "../css/Course/Feed.module.css"
 const Feed = () => {
-  return <div>
-    <h1>
-      feed
-    </h1>
+  return <div className={styles.feed}>
   </div>;
 };
 
