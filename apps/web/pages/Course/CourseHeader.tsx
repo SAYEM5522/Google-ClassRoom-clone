@@ -6,15 +6,15 @@ import { GrApps } from 'react-icons/gr';
 import ClassMiddle from './ClassMiddle';
 const list=[
   {
-  id:'1',
+  id:1,
   name:"Stream"
 },
 {
-  id:'2',
+  id:2,
   name:"ClassWork"
 },
 {
-  id:'3',
+  id:3,
   name:"People"
 }
 ]
