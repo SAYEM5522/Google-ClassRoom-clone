@@ -10,8 +10,12 @@ const ClassFeed = () => {
             <div className={styles.classfeed__middle}>
               <Upcaming/>
               <Announc/>
+             
             </div>
-            <Feed/>
+                   <Feed/>
+                   <Feed/>
+                   <Feed/>           
+
   </div>;
 };
 
