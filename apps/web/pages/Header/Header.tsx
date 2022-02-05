@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import styles from "../css/Header/Header.module.css"
 import { FiMenu } from "react-icons/fi";
 import{AiOutlinePlus} from "react-icons/ai";
@@ -12,9 +12,9 @@ const imageHight:number=70
 const Header = () => {
   const [open,setOpen]=useState(false);
   const router=useRouter()
-  const onClick:React.MouseEventHandler<SVGElement>=()=>{
-      setOpen(!open);
-  }
+  const onClick=useCallback(()=>{
+    setOpen(true)
+  },[])
   
   return (
   <div className={styles.header}>
@@ -22,7 +22,7 @@ const Header = () => {
     
     <div className={styles.header__left} >
     {
-      open?<SIdeBar/>:null
+      open?<SIdeBar setOpen={setOpen}/>:null
     }
       <FiMenu size={22} className={styles.header__Icon} onClick={onClick}/>
       <Image
