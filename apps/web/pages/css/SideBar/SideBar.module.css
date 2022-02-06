@@ -19,6 +19,7 @@
   height: 0.2px;
   background-color:lightgray;
   margin-top: 4px;
+  margin-bottom: 2px;
 }
 .sidebar__middle__top{
   letter-spacing: .01785714em;
@@ -40,6 +41,7 @@
   width: 258px;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 32px;
+  margin-top: -23px;
 
 }
 .sidebar__middle__todo:hover{

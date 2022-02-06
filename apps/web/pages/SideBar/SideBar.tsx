@@ -30,6 +30,8 @@ const SIdeBar = ({setOpen}) => {
 
 
           </div>
+          <div className={styles.sidebar__line}/>
+
           <div className={styles.sidebar__bottom}>
 
           </div>
