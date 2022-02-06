@@ -8,7 +8,7 @@ import {BiCalendarAlt} from "react-icons/bi";
 const SIdeBar = ({setOpen}) => {
   return <div className={styles.sidebar}>
           <div className={styles.sidebar__top}>
-              <SideBarTop name={"Classes"} Icon={CgHomeAlt} setOpen={setOpen} />
+              <SideBarTop name={"Classes"} Icon={CgHomeAlt} setOpen={setOpen} current={true} />
               <SideBarTop name={"Calendar"} Icon={BiCalendarAlt}/>
               <div className={styles.sidebar__line}/>
 

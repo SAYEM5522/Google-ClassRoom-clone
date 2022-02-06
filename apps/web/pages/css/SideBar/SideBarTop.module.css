@@ -19,3 +19,16 @@
 .sidebartop:hover{
   background-color: whitesmoke;
 }
+.sidebartop__current{
+  display: flex;
+ align-items: center;
+ padding-left: 22px;
+ height: 56px;
+ width: 258px;
+ border-top-right-radius: 28px;
+ border-bottom-right-radius: 28px;
+  background-color: #F6F6F6;
+}
+.sidebartop__current:hover{
+  background-color: whitesmoke;
+}
