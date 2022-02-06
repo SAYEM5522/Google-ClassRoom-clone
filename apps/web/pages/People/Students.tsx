@@ -16,8 +16,8 @@ const Students = () => {
           />
           <p className={styles.students__name}>Semonti Barua 2012758042</p>
           <CgMail size={26}/>
-        
         </div>
+        <div className={styles.students__line}/>
   </div>;
 };
 

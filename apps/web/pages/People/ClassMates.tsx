@@ -9,6 +9,19 @@ const ClassMates = () => {
       </div>
       <div className={styles.classmates__line}/>
       <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+      <Students/>
+
   </div>;
 };
 

@@ -22,3 +22,9 @@
     position: absolute;
     margin-left: 52px;
 }
+.students__line{
+  height: 0.2px;
+  background-color:lightgray;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

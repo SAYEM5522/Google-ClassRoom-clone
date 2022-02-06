@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 23px;
 }
 .classmates__top>h1{
   font-family: 'Google Sans',Roboto,Arial,sans-serif;
@@ -27,5 +27,5 @@
 .classmates__line{
   height: 0.2px;
   background-color:#4285f4;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
