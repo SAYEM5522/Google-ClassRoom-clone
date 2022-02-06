@@ -1,0 +1,28 @@
+.teacher{
+  margin-top: 50px;
+
+}
+.teacher__line{
+  height: 0.2px;
+  background-color:#4285f4;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.teacher>h1{
+  color: #1967d2;
+    fill: #1967d2;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+.teacher__bottom{
+  margin-left: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.teacher__icon{
+  margin-right: 20px;
+  margin-top: -5px;
+}
