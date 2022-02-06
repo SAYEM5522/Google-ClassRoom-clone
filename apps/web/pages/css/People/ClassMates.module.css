@@ -1,0 +1,32 @@
+.classmates__top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.classmates__top>h1{
+  font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: #1967d2;
+    fill: #1967d2;
+    margin-left: 20px;
+}
+.classmates__top>p{
+  color: #1967d2;
+    fill: #1967d2;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-right: 20px;
+
+}
+.classmates__line{
+  height: 0.2px;
+  background-color:#4285f4;
+
+  margin-bottom: 10px;
+}
