@@ -32,3 +32,29 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
+.sidebar__middle__todo{
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  height: 64px;
+  width: 258px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+
+}
+.sidebar__middle__todo:hover{
+  background-color: whitesmoke;
+}
+.sidebar__middle__todo>h3{
+  letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    margin-left: 20px;
+}
