@@ -1,0 +1,24 @@
+.students__details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+.students__name{
+  /* flex: 1; */
+  letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px !important;
+    height: 20px;
+    position: absolute;
+    margin-left: 52px;
+}
