@@ -20,3 +20,15 @@
   background-color:lightgray;
   margin-top: 4px;
 }
+.sidebar__middle__top{
+  letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 550;
+    line-height: 1.25rem;
+    color: #5f6368;
+    display: flex;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

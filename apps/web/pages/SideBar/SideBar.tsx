@@ -14,10 +14,14 @@ const SIdeBar = ({setOpen}) => {
 
           </div>
           <div className={styles.sidebar__middle}>
-                <CourseName/>
-                <CourseName/>
-                <CourseName/>
-                <CourseName/>
+                <h3 className={styles.sidebar__middle__top}>Enrolled</h3>
+                <CourseName name={"CSE311.8 Spring 2022"} section={8} background={"#007b83"}/>
+                <CourseName name={"ECO101.18 Spring 2022"} section={10} background={"#1967d2"}/>
+                <CourseName name={"MAT361.11 Spring 2022"} section={11}  background={"#202124"}/>
+                <CourseName name={"CSE311.8 Spring 2022"} section={18}  background={"#137333"}/>
+                <CourseName name={"CSE311.8 Spring 2022"} section={21}  background={"#1967d2"}/>
+                <CourseName name={"BEN201.8 Spring 2022"} section={20}  background={"#137333"}/>
+
           </div>
           <div className={styles.sidebar__bottom}>
 

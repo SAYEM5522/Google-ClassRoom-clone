@@ -1,0 +1,55 @@
+.coursename{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 64px;
+  width: 258px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+.coursename:hover{
+  background-color: whitesmoke;
+}
+.coursename__img{
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  color: #fff;
+    line-height: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .00625em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.coursename__name{
+  letter-spacing: .01785714em;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.coursename__details{
+  margin-left: 15px;
+}
+.coursename__section{
+  letter-spacing: .025em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    color: #5f6368;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    margin-top: -8px;
+}
