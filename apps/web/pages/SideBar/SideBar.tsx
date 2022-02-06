@@ -1,23 +1,26 @@
 import React, { useCallback } from 'react';
 import styles from "../css/SideBar/SideBar.module.css"
 import CourseName from './CourseName';
+import SideBarTop from './SideBarTop';
+import {CgHomeAlt} from "react-icons/cg";
+import {BiCalendarAlt} from "react-icons/bi";
 
 const SIdeBar = ({setOpen}) => {
-  const onClick=useCallback(()=>{
-        setOpen(false)
-  },[])
   return <div className={styles.sidebar}>
-          <div className={styles.sidebar__classes}>
-              <h2 onClick={onClick}>Classes</h2>
-          </div>
-          <div className={styles.sidebar__calender}>
+          <div className={styles.sidebar__top}>
+              <SideBarTop name={"Classes"} Icon={CgHomeAlt} setOpen={setOpen} />
+              <SideBarTop name={"Calendar"} Icon={BiCalendarAlt}/>
+              <div className={styles.sidebar__line}/>
 
           </div>
-          <div className={styles.sidebar__coursename}>
+          <div className={styles.sidebar__middle}>
                 <CourseName/>
                 <CourseName/>
                 <CourseName/>
                 <CourseName/>
+          </div>
+          <div className={styles.sidebar__bottom}>
+
           </div>
 
   </div>;

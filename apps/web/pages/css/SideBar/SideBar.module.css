@@ -10,4 +10,13 @@
     top: 0;
     width: 19rem;
     z-index: 990;
+    
+}
+.sidebar__top{
+  margin-top: 6px;
+}
+.sidebar__line{
+  height: 0.2px;
+  background-color:lightgray;
+  margin-top: 4px;
 }
