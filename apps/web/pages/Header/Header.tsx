@@ -42,8 +42,8 @@ const Header = () => {
       <Image 
        src="/../public/avator.jpg"
        alt="Google"
-       width={30}
-       height={30}
+       width={35}
+       height={35}
        objectFit='cover'
        className='avatar'
       />

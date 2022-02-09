@@ -39,4 +39,28 @@ export const data=[
   section:"11",
   avatar:"/../public/avt4.jpg",
 },
+{
+  id:6,
+  name:"MAT361 Spring 22",
+  faculty:"Nadeem Ahmed",
+  image:"/../public/Honors.jpg",
+  section:"8",
+  avatar:"/../public/avator.jpg",
+},
+{
+  id:7,
+  name:"MAT361 Spring 22",
+  faculty:"Nadeem Ahmed",
+  image:"/../public/Honors.jpg",
+  section:"8",
+  avatar:"/../public/avt5.jpg",
+},
+{
+  id:8,
+  name:"MAT361 Spring 22",
+  faculty:"Nadeem Ahmed",
+  image:"/../public/Honors.jpg",
+  section:"8",
+  avatar:"/../public/avator.jpg",
+},
 ]
