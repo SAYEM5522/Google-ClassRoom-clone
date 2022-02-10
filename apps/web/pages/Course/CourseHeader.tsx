@@ -4,6 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import Image from 'next/image';
 import { GrApps } from 'react-icons/gr';
 import ClassMiddle from './ClassMiddle';
+import { IoSettingsOutline } from "react-icons/io5"
 const list=[
   {
   id:1,
@@ -19,7 +20,7 @@ const list=[
 },
 {
   id:4,
-  name:"Grade"
+  name:"Grades"
 }
 ]
 
@@ -43,6 +44,7 @@ const CourseHeader = () => {
     }
     </div>
     <div className={styles.courseheader__right}>
+    <IoSettingsOutline size={21} style={{ marginRight:"1.5rem"}}/>
     <GrApps size={18} style={{ marginRight:"1.5rem"}} />
        
        <Image 
