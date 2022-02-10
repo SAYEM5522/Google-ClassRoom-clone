@@ -1,0 +1,36 @@
+.classSettingHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  height: 57px;
+  border-bottom: 1px solid lightgray;
+}
+.classSettingHeader__left{
+  display: flex;
+  align-items: center;
+  margin-left: 18px;
+}
+.classSettingHeader__left>p{
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .1px;
+    line-height: 24px;
+    color: #3c4043;
+    margin-left: 15px;
+}
+.classSettingHeader__right{
+  margin-right: 10px;
+  height: 40px;
+  width: 79px;
+  background-color: #202124;
+  border-radius: 6px;
+  position: relative;
+}
+.classSettingHeader__right>p{
+  position: absolute;
+  left: 20px;
+  top: -5px;
+  color: white;
+}
