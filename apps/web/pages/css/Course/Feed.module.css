@@ -1,6 +1,6 @@
 .feed{
     width:78.5%;
-    height:200px;
+    height: fit-content;
     border: 1px solid lightgray;
     border-radius: 7px;
     margin-left: 21.5%;

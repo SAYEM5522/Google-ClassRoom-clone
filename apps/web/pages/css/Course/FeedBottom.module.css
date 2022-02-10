@@ -1,0 +1,42 @@
+.feedbottom__line{
+  height: 0.2px;
+  background-color:lightgray;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+.feedbottom__comment{
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.feedbottom__comment__section{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 20px;
+ 
+}
+.feedbottom__comment__section>input{
+  flex: 1;
+  height: 34px;
+  border-radius: 30px;
+  outline-offset: 0px;
+  outline-width: 0px;
+  border: 1px solid lightgray;
+
+}
+.feedbottom__comment__section>input:focus{
+  outline-offset: 1px;
+  outline-width: 1px;
+  outline-color: black;
+}
+.feedbottom__comment__section>input::placeholder{
+  padding-left: 15px;
+  color: lightgray;
+}
+.feedbottom__comment__icon{
+  position: absolute;
+  right: 10px;
+  color: #9aa0a6;
+}
