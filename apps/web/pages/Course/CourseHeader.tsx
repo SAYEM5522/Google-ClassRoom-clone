@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from "../css/Course/CourseHeader.module.css";
 import { FiMenu } from "react-icons/fi";
 import Image from 'next/image';
 import { GrApps } from 'react-icons/gr';
 import ClassMiddle from './ClassMiddle';
 import { IoSettingsOutline } from "react-icons/io5"
+import { useRouter } from 'next/router';
 const list=[
   {
   id:1,
@@ -25,6 +26,10 @@ const list=[
 ]
 
 const CourseHeader = () => {
+  const router=useRouter();
+  const onClick=useCallback(()=>{
+        router.push("../ClassSettings/ClassSettings")
+  },[])
   return (
 <div className={styles.courseheader}>
     <div className={styles.courseheader__left}>
@@ -44,7 +49,7 @@ const CourseHeader = () => {
     }
     </div>
     <div className={styles.courseheader__right}>
-    <IoSettingsOutline size={21} style={{ marginRight:"1.5rem"}}/>
+    <IoSettingsOutline size={21} className={styles.courseheader__icon} onClick={onClick}/>
     <GrApps size={18} style={{ marginRight:"1.5rem"}} />
        
        <Image 
