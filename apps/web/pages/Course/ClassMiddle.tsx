@@ -19,6 +19,9 @@ const ClassMiddle = ({list}:ClassMiddleProps) => {
         else if(list.id===3){
           router.push("../People/People")
         }
+        else{
+          router.push("../Grade/Grade")
+        }
   },[])
   return <div className={styles.classmiddle}>
     <p className={styles.classmiddle__name} onClick={onclick}>{list.name}</p>

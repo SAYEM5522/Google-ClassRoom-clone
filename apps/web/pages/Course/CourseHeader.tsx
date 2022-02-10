@@ -16,6 +16,10 @@ const list=[
 {
   id:3,
   name:"People"
+},
+{
+  id:4,
+  name:"Grade"
 }
 ]
 
