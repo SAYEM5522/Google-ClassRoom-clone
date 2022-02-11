@@ -2,12 +2,13 @@ import React from 'react'
 import styles from "../css/ClassSettings/ClassSettings.module.css"
 import ClassSettingEdit from './ClassSettingEdit'
 import ClassSettingHeader from './ClassSettingHeader'
+import { motion } from "framer-motion"
 const ClassSettings = () => {
   return (
-           <div>
+           <motion.div >
           <ClassSettingHeader/>
           <ClassSettingEdit/>
-          </div>
+          </motion.div>
   )
 }
 
