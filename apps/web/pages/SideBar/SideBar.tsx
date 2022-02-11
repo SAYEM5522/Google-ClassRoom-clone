@@ -5,9 +5,9 @@ import SideBarTop from './SideBarTop';
 import {CgHomeAlt} from "react-icons/cg";
 import {BiCalendarAlt} from "react-icons/bi";
 import {BsCardChecklist} from "react-icons/bs";
-
+import { motion } from 'framer-motion';
 const SIdeBar = ({setOpen}) => {
-  return <div className={styles.sidebar}>
+  return <motion.div className={styles.sidebar} initial={{width:"0rem",opacity:0.8}} animate={{width:"19rem",opacity:1}} transition={{type:'tween',duration:0.25}} >
           <div className={styles.sidebar__top}>
               <SideBarTop name={"Classes"} Icon={CgHomeAlt} setOpen={setOpen} current={true} />
               <SideBarTop name={"Calendar"} Icon={BiCalendarAlt}/>
@@ -36,7 +36,7 @@ const SIdeBar = ({setOpen}) => {
 
           </div>
 
-  </div>;
+  </motion.div>;
 };
 
 export default SIdeBar;
