@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import styles from "../css/Course/CourseHeader.module.css";
 import { FiMenu } from "react-icons/fi";
 import Image from 'next/image';
@@ -28,13 +28,9 @@ const list=[
 
 const CourseHeader = () => {
   const router=useRouter();
+  const [open,setOpen]=useState(false);
   const onClick=useCallback(()=>{
-    console.log("clicked")
-       return(
-         <div className={styles.courseheader__model}>
-         <ClassSettings/>
-         </div>
-       )
+          setOpen(true);
   },[])
   return (
 <div className={styles.courseheader}>
@@ -74,6 +70,9 @@ const CourseHeader = () => {
          }
        `}</style>
     </div>
+    {
+      open?<ClassSettings setOpen={setOpen}/>:null
+    }
   </div>
   )
 

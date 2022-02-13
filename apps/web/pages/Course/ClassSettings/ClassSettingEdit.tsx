@@ -1,8 +1,12 @@
 import React from 'react'
-import styles from "../../css/CourseClassSettings/ClassSettingEdit.module.css"
+import styles from "../../css/Course/ClassSettings/ClassSettingEdit.module.css"
 const ClassSettingEdit = () => {
   return (
-    <div></div>
+    <div className={styles.classSettingEdit}>
+     <h1  >
+        ClassSettingEdit
+     </h1>
+    </div>
   )
 }
 
