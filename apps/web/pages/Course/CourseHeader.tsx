@@ -6,6 +6,7 @@ import { GrApps } from 'react-icons/gr';
 import ClassMiddle from './ClassMiddle';
 import { IoSettingsOutline } from "react-icons/io5"
 import { useRouter } from 'next/router';
+import ClassSettings from './ClassSettings/ClassSettings';
 const list=[
   {
   id:1,
@@ -28,7 +29,12 @@ const list=[
 const CourseHeader = () => {
   const router=useRouter();
   const onClick=useCallback(()=>{
-        router.push("../ClassSettings/ClassSettings")
+    console.log("clicked")
+       return(
+         <div className={styles.courseheader__model}>
+         <ClassSettings/>
+         </div>
+       )
   },[])
   return (
 <div className={styles.courseheader}>

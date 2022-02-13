@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../css/ClassSettings/ClassSettings.module.css"
+import styles from "../../css/Course/ClassSettings/ClassSettings.module.css"
 import ClassSettingEdit from './ClassSettingEdit'
 import ClassSettingHeader from './ClassSettingHeader'
 import { motion } from "framer-motion"

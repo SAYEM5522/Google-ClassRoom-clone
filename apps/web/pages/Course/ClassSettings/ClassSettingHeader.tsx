@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../css/ClassSettings/ClassSettingHeader.module.css"
+import styles from "../../css/Course/ClassSettings/ClassSettingHeader.module.css"
 import {MdClose} from "react-icons/md"
 const ClassSettingHeader = () => {
   return (
