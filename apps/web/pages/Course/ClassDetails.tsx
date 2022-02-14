@@ -14,10 +14,7 @@ const ClassDetails = () => {
     open: { height: "340px",borderLeftBottomRadius:"0px",borderRightBottomRadius:"0px"},
     closed: { height:"240px" },
   }
-  const variant2 = {
-    open2: { borderLeftBottomRadius:"0px",borderRightBottomRadius:"0px"},
-    closed2: { borderLeftBottomRadius:"10px",borderRightBottomRadius:"10px" },
-  }
+
   return <motion.div className={styles.classdetails}  animate={openBottom ? "open" : "closed"}  variants={variants}>
         <motion.div className={styles.classdetails__name} animate={{borderBottomLeftRadius:openBottom?"0px":"10px",borderBottomRightRadius:openBottom?"0px":"10px"}}  >
           <div className={styles.classdetails__info}>
