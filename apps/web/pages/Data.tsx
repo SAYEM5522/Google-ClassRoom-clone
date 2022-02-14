@@ -55,12 +55,5 @@ export const data=[
   section:"8",
   avatar:"/../public/avt5.jpg",
 },
-{
-  id:8,
-  name:"MAT361 Spring 22",
-  faculty:"Nadeem Ahmed",
-  image:"/../public/Honors.jpg",
-  section:"8",
-  avatar:"/../public/avator.jpg",
-},
+
 ]
