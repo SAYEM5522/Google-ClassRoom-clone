@@ -1,8 +1,9 @@
 import React from 'react'
-
+import {useWindowSize} from "../useWindowSizw";
 const JoinClass = () => {
+  const {width, height} = useWindowSize();
   return (
-    <div>Class</div>
+    <div>{width}</div>
   )
 }
 

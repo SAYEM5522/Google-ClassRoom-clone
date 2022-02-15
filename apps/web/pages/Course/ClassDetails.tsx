@@ -3,6 +3,7 @@ import styles from "../css/Course/ClassDetails.module.css"
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 import ClassDetailBottom from './ClassDetailBottom';
 import { animate, motion } from 'framer-motion';
+import {useWindowSize} from "../useWindowSizw";
 const ClassDetails = () => {
   const [openBottom, setOpenBottom] = React.useState(false);
   const onClick=useCallback(()=>{
