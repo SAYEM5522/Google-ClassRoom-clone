@@ -1,10 +1,12 @@
 .upcoming{
-  /* width: 196px; */
+  width: 196px;
   height: 124px;
   border: 1px solid lightgray ;
   border-radius: 7px;
   flex: 0.19;
   position: relative;
+  background-color: #fff;
+  /* margin-top: 50px; */
 }
 .upcoming__list{
   position: absolute;

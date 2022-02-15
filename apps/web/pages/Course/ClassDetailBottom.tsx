@@ -1,10 +1,15 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import styles from "../css/Course/ClassDetailBottom.module.css"
+import {useWindowSize} from "../useWindowSizw";
+
 const ClassDetailBottom = () => {
+  const {width, height} = useWindowSize();
+
   return (
-    <div className={styles.classDetailBottom}>
+    <motion.div className={styles.classDetailBottom}>
         <h1>hello</h1>
-    </div>
+    </motion.div>
   )
 }
 
