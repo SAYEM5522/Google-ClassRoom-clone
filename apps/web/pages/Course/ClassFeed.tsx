@@ -19,7 +19,7 @@ const ClassFeed = () => {
     marginLeft:(width<1045)?"2rem":"auto", 
     marginRight:(width<1045)?"2rem":"auto",
     width:(width<1045)?"calc(100% - 3.2rem)":"1000px",
-  }}>
+  }} >
             <ClassDetails/>
             <div style={{position:"relative"}}>
               <div style={{position:'absolute',top:"45px"}} >
@@ -28,7 +28,7 @@ const ClassFeed = () => {
               }
               </div>
              
-                  <motion.div style={{position:"absolute",top:"40px",}} animate={{marginLeft:width<970?("5%"):"1%",}} >
+                  <motion.div style={{position:"absolute",top:"40px",}} animate={{marginLeft:width<970?("5%"):"1%",}}  >
                   <Announc/>
                    <Feed/>
                    <Feed/>
