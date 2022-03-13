@@ -11,7 +11,8 @@ import JoinClass from '../JoinClass/JoinClass';
 import styles2 from "../css/Header/PopUpView.module.css"
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import { width } from '@mui/system';
+import { useWindowSize } from '../useWindowSizw'
+import { motion } from 'framer-motion'
 const imageWidth:number=70
 const imageHight:number=70
 const style = {
@@ -29,6 +30,7 @@ const style = {
 };
 
 const Header = () => {
+  const {width, height} = useWindowSize();
   const [open,setOpen]=useState<boolean>(false);
   const [popup,setPopup]=useState<boolean>(false);
   const [join,setJoin]=useState<boolean>(false);
@@ -87,9 +89,10 @@ const Header = () => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box  style={{width:"1000px",height:"1000px",backgroundColor:"#fff"}}>
-      
+      <motion.div initial={{scale:0.8,opacity:1}} animate={{scale:1,opacity:1}} transition={{type:"tween",duration:0.3}}>
+      <Box  style={{width:width,height:height,backgroundColor:"#fff",borderWidth:"0px"}}>
       </Box>
+      </motion.div>
     </Modal>
        </div>
       :null
