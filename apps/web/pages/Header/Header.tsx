@@ -6,20 +6,23 @@ import{AiOutlinePlus} from "react-icons/ai";
 import {GrApps} from "react-icons/gr";
 import { useRouter } from 'next/router';
 import SIdeBar from '../SideBar/SideBar';
+import PopUpView from './PopUpView';
 const imageWidth:number=70
 const imageHight:number=70
 
 const Header = () => {
-  const [open,setOpen]=useState(false);
+  const [open,setOpen]=useState<boolean>(false);
+  const [popup,setPopup]=useState<boolean>(false);
   const router=useRouter()
   const onClick=useCallback(()=>{
     setOpen(true)
-  },[])
+  },[open])
+  const PopUp=useCallback(()=>{
+      setPopup(!popup)
+  },[popup])
   
   return (
   <div className={styles.header}>
-   
-    
     <div className={styles.header__left} >
     {
       open?<SIdeBar setOpen={setOpen}/>:null
@@ -36,9 +39,11 @@ const Header = () => {
     <p >Classroom</p>
     </div>
     <div className={styles.header__right}>
-      <AiOutlinePlus size={21} style={{ marginRight:"1.9rem"}} />
-      <GrApps size={21} style={{ marginRight:"1.6rem"}} />
-       
+      <AiOutlinePlus size={21} style={{ marginRight:"1.9rem",position:'relative'}} onClick={PopUp} />
+      {
+        popup?<PopUpView />:null
+      }
+      <GrApps size={21} style={{ marginRight:"1.6rem"}} />       
       <Image 
        src="/../public/avator.jpg"
        alt="Google"

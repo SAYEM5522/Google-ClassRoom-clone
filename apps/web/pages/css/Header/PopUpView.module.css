@@ -1,0 +1,30 @@
+.PopUpView{
+  position:absolute;
+  top:40px;
+  right: 120px;
+  width:121px;
+  height:112px;
+  z-index:1000;
+  border-radius:6px;
+  display:flex;
+  background-color: #fff;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+  flex-direction: column;
+}
+.PopUpView>p{
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #5f6368;
+  margin-left: 20px;
+  width: 121px;
+  height: 48px;
+  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: Roboto,Arial,sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: .00625em;
+    font-weight: 400;
+    color: #000;
+}
