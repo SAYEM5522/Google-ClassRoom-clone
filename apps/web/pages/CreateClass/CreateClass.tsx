@@ -1,8 +1,31 @@
+import { Modal } from '@mui/material'
+import { Box } from '@mui/system'
 import React from 'react'
-import styles from "../css/CreateClass/CreateClass.module.css"
-const CreateClass = () => {
+import { useWindowSize } from '../useWindowSizw'
+
+const CreateClass = ({setCreateOpen,CreateOpen}) => {
+  const {width, height} = useWindowSize();
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    border: '0px solid #fff',
+    // boxShadow: 24,
+    
+  };
   return (
-    <div>CreateClass</div>
+    <div >
+      <Modal
+      open={CreateOpen}
+      onClose={()=>setCreateOpen(false)}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style}  style={{width:width/2.35,height:height/1.6,backgroundColor:"#fff",borderRadius:"10px",}}>
+      </Box>
+    </Modal>
+    </div>
   )
 }
 

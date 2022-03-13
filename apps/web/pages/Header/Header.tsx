@@ -7,12 +7,12 @@ import {GrApps} from "react-icons/gr";
 import { useRouter } from 'next/router';
 import SIdeBar from '../SideBar/SideBar';
 import PopUpView from './PopUpView';
-import JoinClass from '../JoinClass/JoinClass';
 import styles2 from "../css/Header/PopUpView.module.css"
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useWindowSize } from '../useWindowSizw'
 import { motion } from 'framer-motion'
+ import CreateClass from '../CreateClass/CreateClass'
 const imageWidth:number=70
 const imageHight:number=70
 const style = {
@@ -21,7 +21,6 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width:"1000px",
-  
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -35,8 +34,9 @@ const Header = () => {
   const [popup,setPopup]=useState<boolean>(false);
   const [join,setJoin]=useState<boolean>(false);
   const [modal,setModal]=useState<boolean>(false);
+  const [create,setCreate]=useState<boolean>(false);
+  const [Createopen,setCreateOpen]=useState<boolean>(false);
   
-  const router=useRouter()
   const onClick=useCallback(()=>{
     setOpen(true)
   },[open])
@@ -47,9 +47,10 @@ const Header = () => {
     setJoin(true)
     setModal(true)
   },[join,modal])
-  const CreateClass=useCallback(()=>{
-   
-  },[])
+  const Createclass=useCallback(()=>{
+    setCreate(true)
+    setCreateOpen(true)
+  },[Createopen,create])
   
   return (
   <div className={styles.header}>
@@ -75,7 +76,7 @@ const Header = () => {
         popup?
         <div className={styles2.PopUpView}>
         <p onClick={JoinClass}>Join Class</p>
-        <p onClick={CreateClass}>Create Class</p>
+        <p onClick={Createclass}>Create Class</p>
         </div>
         :null
       }
@@ -97,6 +98,11 @@ const Header = () => {
        </div>
       :null
     }
+    </div>
+    <div style={{position:"absolute",left:"50%",top:"50%"}}>
+      {
+        create?<CreateClass CreateOpen={Createopen} setCreateOpen={setCreateOpen} />:null
+      }
     </div>
       <GrApps size={21} style={{ marginRight:"1.6rem"}} />       
       <Image 
