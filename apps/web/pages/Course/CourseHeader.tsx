@@ -37,8 +37,8 @@ const CourseHeader = () => {
           setOpen(true);
   },[])
   return (
- <motion.div className={styles.courseheader} 
- animate={{
+ <div className={styles.courseheader} 
+ style={{
         height:(width<1045)?"8rem":"4rem",
         alignItems:(width<1045)?"flex-start":"center",
         marginTop:(width<1045)?"1rem":"0rem",
@@ -51,20 +51,25 @@ const CourseHeader = () => {
         <p className={styles.courseheader__left__section}>8</p>
       </div>
     </div>
-    <motion.div className={styles.courseheader__middle}
-     animate={{
+    <div className={styles.courseheader__middle}
+     style={{
           alignSelf:(width<1045)?"flex-end":"center",
           marginBottom:(width<1045)?"-0.8rem":"0rem",
     }}
     >
+
+     <div style={{display:"flex",alignItems:"center",marginLeft:width<650?("-20%"):"1%",}}>
     {
-      list.map((list,index)=>(
-        <ClassMiddle list={list} key={list.id}/>
-      )
+      
+      list.map((list,index)=>{
+       return (
+        <ClassMiddle list={list} key={list.id} index={index+1}/>
+      )}
         
       )
     }
-    </motion.div>
+    </div> 
+    </div>
     <div className={styles.courseheader__right}>
     <IoSettingsOutline size={21} className={styles.courseheader__icon} onClick={onClick}/>
     <GrApps size={18} style={{ marginRight:"1.5rem"}} />
@@ -88,7 +93,7 @@ const CourseHeader = () => {
     {
       open?<ClassSettings setOpen={setOpen}/>:null
     }
-  </motion.div>
+  </div>
   )
 
    

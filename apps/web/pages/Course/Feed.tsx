@@ -9,7 +9,7 @@ import {useWindowSize} from "../useWindowSizw";
 const Feed = () => {
   const {width, height} = useWindowSize();
 
-  return <motion.div className={styles.feed} animate={{marginLeft:(width<900)?"-5%":"21.8%",width:(width<900)?"105%":"78.5%"}} >
+  return <div className={styles.feed} style={{marginLeft:(width<900)?"-5%":"21.8%",width:(width<900)?"105%":"78.5%"}} >
     <div className={styles.feed__top}>
             <FeedTop/>
     </div>
@@ -19,7 +19,7 @@ const Feed = () => {
     <div className={styles.feed__bottom}>
             <FeedBottom/>
     </div>
-  </motion.div>;
+  </div>;
 };
 
 export default Feed;

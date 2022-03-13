@@ -5,8 +5,8 @@ import {useWindowSize} from "../useWindowSizw";
 const Announc = () => {
   const {width, height} = useWindowSize();
 
-  return <motion.div className={styles.announce} animate={{marginLeft:(width<900)?"-5%":"21.8%",width:(width<900)?"105%":"78.5%"}}  >
-  </motion.div>;
+  return <div className={styles.announce} style={{marginLeft:(width<900)?"-5%":"21.8%",width:(width<900)?"105%":"78.5%"}}  >
+  </div>;
 };
 
 export default Announc;

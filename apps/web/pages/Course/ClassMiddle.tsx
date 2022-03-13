@@ -1,13 +1,17 @@
 import { useRouter } from 'next/router';
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import styles from "../css/Course/ClassMiddle.module.css"
+import {useWindowSize} from "../useWindowSizw";
 interface ClassMiddleProps{
   list: {
     id: number;
     name: string;
+},
+index?: number;
 }
-}
-const ClassMiddle = ({list}:ClassMiddleProps) => {
+const ClassMiddle = ({list,index}:ClassMiddleProps) => {
+  const {width, height} = useWindowSize();
+  const [currentIndex,setcurrentIndex]=useState(0);
   const router=useRouter();
   const onclick=useCallback(()=>{
         if(list.id===1){
@@ -21,10 +25,11 @@ const ClassMiddle = ({list}:ClassMiddleProps) => {
         }
         else{
           router.push("../Grade/Grade")
-        }
-  },[])
-  return <div className={styles.classmiddle}>
-    <p className={styles.classmiddle__name} onClick={onclick}>{list.name}</p>
+        } 
+  },[currentIndex,list.id,router])
+  return <div className={styles.classmiddle} 
+  >     
+    <p className={styles.classmiddle__name} style={{borderBottom:`${(currentIndex===list.id)?"2px solid red":null}`}} onClick={onclick}>{list.name}</p>
   </div>;
 };
 

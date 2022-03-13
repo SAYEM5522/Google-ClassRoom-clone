@@ -2,18 +2,18 @@ export const data=[
 {
   id:1,
   name:"CSE 299 Spring 22",
-  faculty:"Kai Barua",
+  faculty:"Nadeem Ahmed",
   image:"/../public/Honors.jpg",
   section:"4",
-  avatar:"/../public/avt1.jpg",
+  avatar:"/../public/avt5.jpg",
 },
 {
   id:2,
   name:"CSE 311 Spring 22",
-  faculty:"Semonti Barua",
+  faculty:"Nadeem Ahmed",
   image:"/../public/bag1.jpg",
   section:"8",
-  avatar:"/../public/avt3.jpg",
+  avatar:"/../public/avt4.jpg",
 },
 {
   id:3,

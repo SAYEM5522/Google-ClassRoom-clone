@@ -7,9 +7,9 @@ const ClassDetailBottom = () => {
   const {width, height} = useWindowSize();
 
   return (
-    <motion.div className={styles.classDetailBottom}>
+    <div className={styles.classDetailBottom} style={{top:(width<630)?"180px":null}}>
         <h1>hello</h1>
-    </motion.div>
+    </div>
   )
 }
 
