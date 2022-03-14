@@ -2,6 +2,7 @@ import { Modal } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import { useWindowSize } from '../useWindowSizw'
+import ClassInformation from './ClassInformation'
 
 const CreateClass = ({setCreateOpen,CreateOpen}) => {
   const {width, height} = useWindowSize();
@@ -22,7 +23,8 @@ const CreateClass = ({setCreateOpen,CreateOpen}) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}  style={{width:width/2.35,height:height/1.6,backgroundColor:"#fff",borderRadius:"10px",}}>
+      <Box sx={style}  style={{width:width/2.35,height:height/1.56,backgroundColor:"#fff",borderRadius:"10px",}}>
+          <ClassInformation/>
       </Box>
     </Modal>
     </div>
