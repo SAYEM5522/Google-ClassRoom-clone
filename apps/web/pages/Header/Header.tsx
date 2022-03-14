@@ -13,6 +13,8 @@ import Modal from '@mui/material/Modal';
 import { useWindowSize } from '../useWindowSizw'
 import { motion } from 'framer-motion'
  import CreateClass from '../CreateClass/CreateClass'
+import JoinClass from '../JoinClass/JoinClass';
+
 const imageWidth:number=70
 const imageHight:number=70
 const style = {
@@ -43,7 +45,7 @@ const Header = () => {
   const PopUp=useCallback(()=>{
       setPopup(!popup)
   },[popup])
-  const JoinClass=useCallback(()=>{
+  const Joinclass=useCallback(()=>{
     setJoin(true)
     setModal(true)
   },[join,modal])
@@ -75,7 +77,7 @@ const Header = () => {
       {
         popup?
         <div className={styles2.PopUpView}>
-        <p onClick={JoinClass}>Join Class</p>
+        <p onClick={Joinclass}>Join Class</p>
         <p onClick={Createclass}>Create Class</p>
         </div>
         :null
@@ -92,6 +94,7 @@ const Header = () => {
     >
       <motion.div initial={{scale:0.8,opacity:1}} animate={{scale:1,opacity:1}} transition={{type:"tween",duration:0.3}}>
       <Box  style={{width:width,height:height,backgroundColor:"#fff",borderWidth:"0px"}}>
+        <JoinClass setModal={setModal} />
       </Box>
       </motion.div>
     </Modal>

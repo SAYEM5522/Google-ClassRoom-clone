@@ -29,3 +29,8 @@ body {
 .feedbottom__comment__avatar{
   border-radius: 50%;
 }
+.joinClass__avatar{
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+}
