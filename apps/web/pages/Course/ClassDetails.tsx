@@ -17,7 +17,7 @@ const ClassDetails = () => {
     closed: { height:"240px" },
   }
 
-  return <motion.div className={styles.classdetails}  animate={openBottom ? "open" : "closed"}  variants={variants}>
+  return <div className={styles.classdetails}  style={{height:openBottom?"340px":"240px"}}  >
         <div className={styles.classdetails__name} style={{borderBottomLeftRadius:openBottom?"0px":"10px",borderBottomRightRadius:openBottom?"0px":"10px",height:(width<630)?"180px":"240px"}}  >
           <div className={styles.classdetails__info}>
           <h1>CSE311.8 Spring 2022</h1>
@@ -31,7 +31,7 @@ const ClassDetails = () => {
         </div> 
         </div>
        
-            </motion.div>;
+            </div>;
 
 };
 
