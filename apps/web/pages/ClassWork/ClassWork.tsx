@@ -5,6 +5,7 @@ import ClassWorkHeader from './ClassWorkHeader';
 
 const ClassWork = () => {
   return <div>
+
       <CourseHeader/>
       <div style={{width:"55%",height:"48px",marginLeft:"auto",marginRight:"auto",marginTop:"20px"}}>
       <ClassWorkHeader/>

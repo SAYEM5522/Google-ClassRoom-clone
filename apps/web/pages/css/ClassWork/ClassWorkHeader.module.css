@@ -15,6 +15,7 @@
   align-items: center;
   display: flex;
   box-shadow: 0 5px 5px -3px rgb(0 0 0 / 2%), 0 8px 10px 1px rgb(0 0 0 / 5%), 0 3px 14px 2px rgb(0 0 0 / 2%);
+  cursor: pointer;
 
 
 
@@ -34,4 +35,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.PopUpView{
+  position:absolute;
+  top:57px;
+  width:208px;
+  height:112px;
+  z-index:1000;
+  border-radius:6px;
+  display:flex;
+  background-color: #fff;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+  flex-direction: column;
 }

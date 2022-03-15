@@ -5,6 +5,7 @@ import styles from "../css/ClassWork/ClassWorkFeed.module.css"
 const ClassWorkFeed = () => {
   return (
     <div className={styles.ClassWorkFeed}>
+
       <div className={styles.ClassWorkFeed__Left}>
         <div className={styles.ClassWorkFeed__Left__Icon}>
         <RiFileList2Line size={25} />
@@ -17,7 +18,7 @@ const ClassWorkFeed = () => {
       <p>
         Due Tomorrow
       </p>
-        <BiDotsVerticalRounded size={23}/>
+        <BiDotsVerticalRounded size={23} color="#5f6368"/>
      </div>
     </div> 
   )
