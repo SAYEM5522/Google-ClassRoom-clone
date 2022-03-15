@@ -4,7 +4,7 @@ import JoinFeed from "./joinFeed"
 const JoinClass = ({setModal}) => {
   return (
     <div>
-      <JoinClassHeader setModal={setModal}/>
+      <JoinClassHeader setModal={setModal} name={"Join Class"} button={"Join"}/>
       <div style={{
         width:"42%",
         height:"100%",
