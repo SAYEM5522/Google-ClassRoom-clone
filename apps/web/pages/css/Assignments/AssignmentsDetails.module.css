@@ -1,0 +1,64 @@
+.Assignment__Details__Left{
+  flex: 0.75;
+  height: 100%;
+}
+.Assignment__Details__Right{
+  flex: 0.25;
+  /* background-color: black; */
+  height: 100%;
+}
+.Assignment__Details{
+  display: flex;
+  flex-direction: row;
+}
+.Assignment__Details__Left1__Input{
+  width: 55rem;
+  height: 50px;
+  border: 0px;
+  border-bottom: 1px solid black;
+  background-color: #F1F3F4;
+  
+  outline: 0px;
+  margin: 25px 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.Assignment__Details__Left2__Input{
+  width: 55rem;
+  height: 136px;
+  border: 0px;
+  border-bottom: 1px solid black;
+  background-color: #F1F3F4;
+  
+  outline: 0px;
+  margin: 25px 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.Assignment__Details__Left2__Input::placeholder{
+  flex-shrink: 2;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    line-height: 20px;
+    outline: none;
+    padding: 0 24px;
+    text-align: start;
+}
+.Assignment__Details__Left1__Input::placeholder{
+     flex-grow: 1;
+    
+    flex-shrink: 1;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 24px;
+    padding-left: 15px;
+}
+.Assignment__Details__Left__1{
+  display: flex;
+  align-items: center;
+
+}
