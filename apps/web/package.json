@@ -12,11 +12,13 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.5.0",
+    "@reduxjs/toolkit": "^1.8.1",
     "framer-motion": "^6.2.6",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
+    "react-redux": "^7.2.8",
     "ui": "*"
   },
   "devDependencies": {

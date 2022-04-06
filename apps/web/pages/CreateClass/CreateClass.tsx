@@ -22,7 +22,7 @@ const CreateClass = ({setCreateOpen,CreateOpen}) => {
       onClose={()=>setCreateOpen(false)}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
-    >
+       >
       <Box sx={style}  style={{width:width/2.35,height:height/1.56,backgroundColor:"#fff",borderRadius:"10px",}}>
           <ClassInformation/>
       </Box>
