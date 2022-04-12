@@ -6,6 +6,7 @@ const Announc = () => {
   const {width, height} = useWindowSize();
 
   return <div className={styles.announce} style={{marginLeft:(width<900)?"-5%":"21.8%",width:(width<900)?"105%":"78.5%"}}  >
+    <input type="text" placeholder="Announce something to your class" className={styles.search}/>
   </div>;
 };
 

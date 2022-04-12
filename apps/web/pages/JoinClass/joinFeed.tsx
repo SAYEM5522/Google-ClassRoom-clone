@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import styles from "../css/JoinClass/JoinFeed.module.css"
+import { selectEmail, selectImageUrl, selectName } from '../features/ClassRoomList'
 const joinFeed = () => {
+  const name=useSelector(selectName)
+  const email=useSelector(selectEmail)
+  const image=useSelector(selectImageUrl)
+  console.log(image)
   return (
     <div>
       <div className={styles.JoinFeed1}>
@@ -11,7 +17,7 @@ const joinFeed = () => {
         <div  className={styles.JoinFeed1__infor}>
       <div>
         <Image
-      src={"/../public/avt5.jpg"}
+      src={image}
       alt="Google"
       width={40}
       height={40}
@@ -20,8 +26,8 @@ const joinFeed = () => {
       />
       </div>
       <div style={{flex:1,marginLeft:"15px"}}>
-        <p className={styles.JoinFeed1__name}>md sayem</p>
-        <p className={styles.JoinFeed1__email}>md1040582@gmail.com</p>
+        <p className={styles.JoinFeed1__name}>{name}</p>
+        <p className={styles.JoinFeed1__email}>{email}</p>
       </div>
       <div className={styles.JoinFeed1__button}>
         <p>Switch Account</p>

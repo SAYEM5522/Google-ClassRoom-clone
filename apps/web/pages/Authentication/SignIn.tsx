@@ -1,11 +1,64 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import GoogleLogin from 'react-google-login'
 import styles from "../css/Authentication/SignIn.module.css"
 import { useWindowSize } from '../useWindowSizw'
-
+import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { setGoogleID, setUser } from '../features/ClassRoomList'
 const SignIn = () => {
   const {width, height} = useWindowSize();
-
+  const dispatch=useDispatch();
+  const client__id="158609113954-ohvnc6ousgfb6tjfs4ju5v7e9vpbunbg.apps.googleusercontent.com"
+  const responseSuccess =async (response:any) => {
+    const { email, name, googleId,imageUrl } = response.profileObj;
+    const data = {
+      email,
+      name,
+      googleId,
+      imageUrl
+    }
+    await axios.post('http://localhost:5000/signin', data).
+    then(res => {
+      console.log(res.data.googleId)
+      dispatch(setGoogleID({
+        googleId:res.data.googleId
+      }))
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+  }
+  const responseFailure = (response:any) => {
+    console.log(response)
+  }
+  // const getUser=({response})=>{
+  //     axios.post('http://localhost:5000/CreateClass',{})
+  //     .then(res=>{
+  //       setUser(res.data)
+  //     })
+  //   }
+  //  useEffect(()=>{
+  //   getUser(),
+  //     ()=> getUser() 
+  //  },[])
+  const getdata=()=>{
+    axios.get('http://localhost:5000/signin?id=116689928635388390309')
+    .then(res=>{
+    dispatch(setUser({
+      
+      Email:res.data[0]?.email,
+      Name:res.data[0]?.name,
+      ImageUrl:res.data[0]?.imageUrl,
+      
+    }))
+    })
+  }
+  useEffect(()=>{
+     getdata(),
+     ()=>getdata()
+  },[])
+    
   return (
     <div>
       <div style={{height:(height/1.1)/2,backgroundColor:"whitesmoke",borderTopLeftRadius:"40px",borderTopRightRadius:"40px"}}>
@@ -29,9 +82,19 @@ const SignIn = () => {
         Classroom helps classes communicate, save time, and stay organized. 
       </h2>
       </div>
-      <div className={styles.SignInText}>
+      <GoogleLogin
+    clientId={client__id}
+    render={renderProps => (
+      <div onClick={renderProps.onClick} className={styles.SignInText}>
         <p>Sign In</p>
       </div>
+    )}
+    buttonText="Login"
+    onSuccess={responseSuccess}
+    onFailure={responseFailure}
+    cookiePolicy={'single_host_origin'}
+  />
+      
       <p className={styles.BottomText}>By joining, you agree to share contact information with people in your class</p>
 
     </div>
