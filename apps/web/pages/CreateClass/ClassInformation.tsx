@@ -2,12 +2,14 @@ import { useRouter } from 'next/router';
 import React, { useCallback } from 'react'
 import styles from "../css/CreateClass/ClassInformation.module.css"
 import axios from 'axios';
+import { useState } from 'react';
 const ClassInformation = () => {
   const router=useRouter();
   const [ClassName, setClassName] = React.useState("");
   const [Section, setSection] = React.useState("");
   const [Subject, setSubject] = React.useState("");
   const [Room, setRoom] = React.useState("");
+  const [classCode,setClassCode]=useState("")
   const ProvideClassName=useCallback((e)=>{
     setClassName(e.target.value)
   },[ClassName])
@@ -37,9 +39,15 @@ const ClassInformation = () => {
           Subject,
           Room
       })
-      ClassCode()
+    //  setClassCode(ClassCode())
+     const code={
+         classCode:ClassCode()
+     }
+     axios.post('http://localhost:5000/CreateClassCode',code)
+     
       router.push("/Course/Class")
   },[ClassName,Section,Subject,Room])
+  
   return (
     <div>
       <p className={styles.ClassHeader}>Create class</p>
