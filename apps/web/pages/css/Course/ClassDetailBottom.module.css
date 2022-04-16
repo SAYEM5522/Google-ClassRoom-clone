@@ -11,3 +11,9 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.classDetailBottom__Text{
+  font-size: 14px;
+  color: #000;
+  margin-left: 20px;
+  
+}
