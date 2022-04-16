@@ -6,7 +6,7 @@ const initialState = {
  Room:"",
  googleID:null,
  Email:null,
-  Name:null,
+ Name:null,
  ImageUrl:"",
 
 }

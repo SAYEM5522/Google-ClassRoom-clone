@@ -11,3 +11,62 @@
   
   
 }
+.AnnounceText{
+  color: rgba(0,0,0,.87);
+    font-family: 'Roboto',Helvetica,Arial,sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin: 0;
+    min-width: 18.75rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.announce__input{
+  color: rgba(0,0,0,.87);
+  font-family: 'Roboto',Helvetica,Arial,sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin: 0;
+  min-width: 18.75rem;
+  background-color: #f8f9fa;
+   -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    padding: 10px 16px;
+    padding-top: 22px;
+    height: 136px;
+    border: 0px;
+    margin-top: -15px;
+}
+.announce__middle{
+  position: absolute;
+  right: 20px;
+  
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+.announce__middle1{
+  margin-left: 20px;
+  width: 46px;
+  height: 36px;
+  cursor: pointer;
+}
+.announce__middle2{
+  margin-left: 20px;
+  width: 77px;
+  height: 36px;
+  box-shadow: none;
+    color: rgba(0,0,0,.38);
+    fill: rgba(0,0,0,.38);
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    margin-top: -22px;
+    cursor: pointer;
+    
+}
+.announce__middle2>p{
+  margin-top: 10px;
+  margin-left: 20px;
+}

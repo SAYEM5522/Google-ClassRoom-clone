@@ -6,12 +6,20 @@ import Feed from './Feed';
 import Upcaming from './Upcaming';
 import {useWindowSize} from "../useWindowSizw";
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 const ClassFeed = () => {
   const {width, height} = useWindowSize();
   const [show,setShow]=useState(true);
+  const [data,setData]=useState([]);
+  const getData=async()=>{
+    const res=await axios.get("http://localhost:5000/Annoncement");
+    setData(res.data);
+  }
   useEffect(()=>{
     (width<900)?setShow(false):setShow(true);
+    getData(),
+    ()=>getData()
   },[width])
 
   
@@ -32,9 +40,13 @@ const ClassFeed = () => {
                   ,marginLeft:width<970?("5%"):"1%"
                   }}  >
                   <Announc/>
-                   <Feed/>
-                   <Feed/>
-                   <Feed/>   
+                  {
+                       data.map((item,index)=>{
+                          return(
+                            <Feed key={index} item={item}/>
+                          )
+                       })
+                  }
                   </div>
             </div>
             

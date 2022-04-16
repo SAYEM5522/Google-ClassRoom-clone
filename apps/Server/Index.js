@@ -62,6 +62,39 @@ app.get("/CreateClassCode",(req,res)=>{
     res.send(result);
   })
 })
+// API for Post comments
+app.post("/Comments",(req,res)=>{
+  const {comments,name,times,imgUrl,id}=req.body;
+  connection.query(`INSERT INTO comments(comments,name,times,imgUrl,id)
+   VALUES('${comments}','${name}','${times}','${imgUrl}','${id}')`,(err,result)=>{
+    if(err) throw err;
+    res.send(result);
+  })
+})
+// API for get comments
+app.get("/Comments",(req,res)=>{
+  connection.query(`SELECT * FROM comments`,(err,result)=>{
+    if(err) throw err;
+    res.send(result);
+  })
+})
+// API for Post Annoncement
+app.post("/Annoncement",(req,res)=>{
+  const {announcement,name,times,imgUrl}=req.body;
+  connection.query(`INSERT INTO announce(announcement,name,times,imgUrl)
+  VALUES('${announcement}','${name}','${times}','${imgUrl}')`,(err,result)=>{
+   if(err) throw err;
+   res.send(result);
+ })
+  
+})
+// API for get Annoncement
+app.get("/Annoncement",(req,res)=>{
+  connection.query(`SELECT * FROM announce`,(err,result)=>{
+    if(err) throw err;
+    res.send(result);
+  })
+})
 
 
 // Server Start
