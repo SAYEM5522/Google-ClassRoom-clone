@@ -23,9 +23,15 @@ const ClassSettings = ({setOpen}) => {
   const ProvideRoom=useCallback((e)=>{
     setRoom(e.target.value)
   },[Room])
+  const data={
+    ClassName,
+    Section,
+    Subject,
+    Room
+  }
   return (
            <motion.div className={styles1.classsetting} initial={{scaleY:0.8,scaleX:0.9,opacity:0}} animate={{scaleY:1,scaleX:1,opacity:1}}>
-          <JoinClassHeader setModal={setOpen}  name={"Class Setting"} button={"Save"}/>
+          <JoinClassHeader setModal={setOpen} ClassName={ClassName} Section={Section} Subject={Subject} Room={Room}  name={"Class Setting"} button={"Save"}/>
           <div className={styles.classSettingEdit}>
       <div>
       <p className={styles.ClassHeader}>Class Details</p>

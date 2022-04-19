@@ -14,6 +14,9 @@ import { useWindowSize } from '../useWindowSizw'
 import { motion } from 'framer-motion'
 import CreateClass from '../CreateClass/CreateClass'
 import JoinClass from '../JoinClass/JoinClass';
+import { useSelector } from 'react-redux';
+import { selectImageUrl } from '../features/ClassRoomList';
+import HeaderMenue from './HeaderMenue';
 
 const imageWidth: number = 70
 const imageHight: number = 70
@@ -37,7 +40,7 @@ const Header = () => {
   const [modal, setModal] = useState<boolean>(false);
   const [create, setCreate] = useState<boolean>(false);
   const [Createopen, setCreateOpen] = useState<boolean>(false);
-
+  const img=useSelector(selectImageUrl)
   const onClick = useCallback(() => {
     setOpen(true)
   }, [open])
@@ -60,7 +63,10 @@ const Header = () => {
         {
           open ? <SIdeBar setOpen={setOpen} /> : null
         }
-        <FiMenu size={22} className={styles.header__Icon} onClick={onClick} />
+        <div>
+          <HeaderMenue open={open} setOpen={setOpen} />
+        </div>
+        {/* <FiMenu size={22} className={styles.header__Icon} onClick={onClick} /> */}
         <Image
           src="/../public/logo.jpg"
           alt="Google"
@@ -109,6 +115,7 @@ const Header = () => {
         <GrApps size={21} style={{ marginRight: "1.6rem" }} />
         <Image
           src="/../public/avator.jpg"
+          // src={img}
           alt="Google"
           width={35}
           height={35}

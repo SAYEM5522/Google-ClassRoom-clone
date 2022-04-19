@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useCallback } from 'react'
 import styles from "../css/CreateClass/ClassInformation.module.css"
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 const ClassInformation = () => {
   const router=useRouter();
@@ -22,6 +23,8 @@ const ClassInformation = () => {
   const ProvideRoom=useCallback((e)=>{
     setRoom(e.target.value)
   },[Room])
+ const id=uuidv4();
+ 
   const ClassCode = () => {
     let text = '';
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -37,7 +40,8 @@ const ClassInformation = () => {
           ClassName,
           Section,
           Subject,
-          Room
+          Room,
+          id,
       })
     //  setClassCode(ClassCode())
      const code={

@@ -9,6 +9,9 @@ import { useRouter } from 'next/router';
 import ClassSettings from './ClassSettings/ClassSettings';
 import {useWindowSize} from "../useWindowSizw";
 import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectImageUrl } from '../features/ClassRoomList';
+import HeaderMenue from '../Header/HeaderMenue';
 
 const list=[
   {
@@ -33,6 +36,7 @@ const CourseHeader = () => {
   const {width, height} = useWindowSize();
   const router=useRouter();
   const [open,setOpen]=useState(false);
+  const img=useSelector(selectImageUrl)
   const onClick=useCallback(()=>{
           setOpen(true);
   },[])
@@ -45,7 +49,9 @@ const CourseHeader = () => {
  }}
  >
     <div className={styles.courseheader__left}>
-      <FiMenu size={22}/>
+      <FiMenu size={22}  />
+      
+       
       <div className={styles.courseheader__left__name}>
         <p className={styles.courseheader__left__coursename}>CSE311.8 Spring 2022</p>
         <p className={styles.courseheader__left__section}>8</p>
@@ -75,7 +81,8 @@ const CourseHeader = () => {
     <GrApps size={18} style={{ marginRight:"1.5rem"}} />
        
        <Image 
-        src="/../public/avator.jpg"
+        
+        src={"/../public/avator.jpg"}
         alt="Google"
         width={30}
         height={30}

@@ -6,12 +6,15 @@ import { animate, motion } from 'framer-motion';
 import {useWindowSize} from "../useWindowSizw";
 import { useSelector } from 'react-redux';
 import ClassRoomList, { selectCreateRoom,selectCreateSubject,selectCreateSection} from '../features/ClassRoomList';
+import { useRouter } from 'next/router';
 
 const ClassDetails = () => {
-  const classRoomListSubject=useSelector(selectCreateSubject)
-  const classRoomListSection=useSelector(selectCreateSection)
-  const classRoomListRoom=useSelector(selectCreateRoom)
-  console.log(classRoomListSubject)
+  const router = useRouter()
+  console.log("router name :",router.query.keyword);
+  // const classRoomListSubject=useSelector(selectCreateSubject)
+  // const classRoomListSection=useSelector(selectCreateSection)
+  // const classRoomListRoom=useSelector(selectCreateRoom)
+  
   const {width, height} = useWindowSize();
   const [openBottom, setOpenBottom] = React.useState(false);
   const onClick=useCallback(()=>{
@@ -26,8 +29,8 @@ const ClassDetails = () => {
   return <div className={styles.classdetails}  style={{height:openBottom?"340px":"240px"}}  >
         <div className={styles.classdetails__name} style={{borderBottomLeftRadius:openBottom?"0px":"10px",borderBottomRightRadius:openBottom?"0px":"10px",height:(width<630)?"180px":"240px"}}  >
           <div className={styles.classdetails__info}>
-          <h1>{classRoomListSubject}</h1>
-          <h4>{classRoomListSection}</h4>
+          <h1>{router.query.keyword}</h1>
+          <h4>{router.query.Section}</h4>
           </div>
         <AiOutlineInfoCircle color='#fff' size={24} className={styles.classdetails__icon} onClick={onClick} />
         <div className={styles.classdetails__bottom} >

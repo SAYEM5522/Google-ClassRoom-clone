@@ -7,12 +7,14 @@ import {useWindowSize} from "../useWindowSizw";
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { selectImageUrl, selectName } from '../features/ClassRoomList';
+import { v4 as uuidv4 } from 'uuid';
 const Announc = () => {
   const {width, height} = useWindowSize();
   const [open,setOpen]=useState(false)
   const [announce,setAnnounce]=useState("")
   const name=useSelector(selectName)
   const imgUrl=useSelector(selectImageUrl)
+  const id=uuidv4();
   const OnClick=useCallback(()=>{
         setOpen(true)
   },[open])
@@ -29,13 +31,15 @@ const times=todaysDate.toLocaleDateString('en-us', {  month: 'short', day: 'nume
       announcement:announce,
       name:name,
       times:times,
-      imgUrl:imgUrl
+      imgUrl:imgUrl,
+      id:id
     }
     axios.post("http://localhost:5000/Annoncement",data)
+    setAnnounce("")
  },[announce,name,times,imgUrl])
 
   return <div className={styles.announce} style={{marginLeft:(width<900)?"-5%":"21.8%",
-  width:(width<900)?"105%":"76.5%",display:"flex",
+  width:(width<900)?"105%":"76%",display:"flex",
   height:(open?"240px":"72px"),
   flexDirection:"row",alignItems:"center",paddingLeft:"20px"}} >
     {
@@ -57,7 +61,7 @@ const times=todaysDate.toLocaleDateString('en-us', {  month: 'short', day: 'nume
       :
       <div style={{flexDirection:"row",alignItems:"center",display:"flex"}} onClick={OnClick} >
         <Image
-            src={"/../public/avt5.jpg"}
+            src={"/../public/avt6.jpg"}
             alt="Google"
             width={40}
             height={40}

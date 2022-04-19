@@ -7,6 +7,14 @@
   border-bottom: 1px solid lightgray;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
+  cursor: pointer;
+  position: relative;
+}
+.ClassWorkFeed:hover{
+  -webkit-box-shadow: 1px 1px 26px 3px rgba(0,0,0,0.15); 
+  box-shadow: 1px 1px 26px 3px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  cursor: pointer;
 }
 .ClassWorkFeed__Left{
   display: flex;
@@ -59,4 +67,14 @@
     margin-left: 1.5rem;
     width: 2.25rem;
     border-radius: 20px;
+}
+.ClassWorkFeed__Bottom{
+
+  margin-top: -80px;
+  border-top: 1px solid gray;
+  width: 100%;
+}
+.ClassWorkFeed__Bottom>p{
+  margin-left: 20px;
+  margin-right: 20px;
 }

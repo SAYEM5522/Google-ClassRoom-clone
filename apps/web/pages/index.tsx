@@ -14,9 +14,26 @@ interface Uprops{
 export default function Web() {
 
   const dispatch = useDispatch();
+  const getId=useSelector(selectGoogleID)
+  console.log(getId)
+  const getdata=()=>{
+    axios.get(`http://localhost:5000/signin`)
+    .then(res=>{
+    dispatch(setUser({
+      Email:res.data[0]?.email,
+      Name:res.data[0]?.name,
+      ImageUrl:res.data[0]?.imageUrl,
+    }))
+    }).catch(err=>{
+      console.log(err)
+  })
+  }
+  useEffect(()=>{
+     getdata(),
+     ()=>getdata()
+  },[])
   const user=useSelector(selectEmail);
 
-  const getId=useSelector(selectGoogleID)
   return (
     
     <div>

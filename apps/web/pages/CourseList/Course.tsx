@@ -8,13 +8,14 @@ import styles from "../css/CourseList/Course.module.css";
 import { setClassRoomList } from '../features/ClassRoomList';
 interface CourseProps {
   course: {
-    id: number;
+    id: string;
     Subject: string;
     faculty: string;
     image?: string;
     Section: string;
     avatar: string;
     Room: string;
+    ClassName: string;
 
   }
 }
@@ -32,9 +33,16 @@ const Course = ({course}:CourseProps) => {
     dispatch(setClassRoomList({
       Subject:course.Subject,
       Section:course.Section,
-      Room:course.Room
+      Room:course.Room,
+      uadateID:course.id
     }))
-    router.push("/Course/Class")
+    router.push({
+     pathname: "/Course/Class",
+     query:{
+       keyword:course.ClassName,
+        Section:course.Section,
+      }
+    })
   }
   return <div className={styles.course}>
         <div className={styles.course__details}>

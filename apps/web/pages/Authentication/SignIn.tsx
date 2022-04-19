@@ -4,11 +4,13 @@ import GoogleLogin from 'react-google-login'
 import styles from "../css/Authentication/SignIn.module.css"
 import { useWindowSize } from '../useWindowSizw'
 import axios from 'axios'
-import { useDispatch } from 'react-redux'
-import { setGoogleID, setUser } from '../features/ClassRoomList'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectGoogleID, setGoogleID, setUser } from '../features/ClassRoomList'
 const SignIn = () => {
   const {width, height} = useWindowSize();
   const dispatch=useDispatch();
+  const gid=useSelector(selectGoogleID);
+  console.log(gid)
   const client__id="158609113954-ohvnc6ousgfb6tjfs4ju5v7e9vpbunbg.apps.googleusercontent.com"
   const responseSuccess =async (response:any) => {
     const { email, name, googleId,imageUrl } = response.profileObj;
@@ -20,7 +22,6 @@ const SignIn = () => {
     }
     await axios.post('http://localhost:5000/signin', data).
     then(res => {
-      console.log(res.data.googleId)
       dispatch(setGoogleID({
         googleId:res.data.googleId
       }))
@@ -42,22 +43,22 @@ const SignIn = () => {
   //   getUser(),
   //     ()=> getUser() 
   //  },[])
-  const getdata=()=>{
-    axios.get('http://localhost:5000/signin?id=116689928635388390309')
-    .then(res=>{
-    dispatch(setUser({
+  // const getdata=()=>{
+  //   axios.get(`http://localhost:5000/signin?id=${gid}`)
+  //   .then(res=>{
+  //   dispatch(setUser({
       
-      Email:res.data[0]?.email,
-      Name:res.data[0]?.name,
-      ImageUrl:res.data[0]?.imageUrl,
+  //     Email:res.data[0]?.email,
+  //     Name:res.data[0]?.name,
+  //     ImageUrl:res.data[0]?.imageUrl,
       
-    }))
-    })
-  }
-  useEffect(()=>{
-     getdata(),
-     ()=>getdata()
-  },[])
+  //   }))
+  //   })
+  // }
+  // useEffect(()=>{
+  //    getdata(),
+  //    ()=>getdata()
+  // },[])
     
   return (
     <div>

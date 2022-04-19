@@ -7,11 +7,14 @@ import Upcaming from './Upcaming';
 import {useWindowSize} from "../useWindowSizw";
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { setAnnouncementId } from '../features/ClassRoomList';
 
 const ClassFeed = () => {
   const {width, height} = useWindowSize();
   const [show,setShow]=useState(true);
   const [data,setData]=useState([]);
+  const dispatch=useDispatch();
   const getData=async()=>{
     const res=await axios.get("http://localhost:5000/Annoncement");
     setData(res.data);
