@@ -7,9 +7,12 @@ import {HiOutlineMenuAlt2} from "react-icons/hi"
 import { useCallback } from 'react'
 import { MdClose } from 'react-icons/md'
 import axios from 'axios'
+import { useSelector } from 'react-redux'
+import { selectUpdateId } from '../features/ClassRoomList'
 const AssignmentDetails = ({setModal}) => {
   const [AssignmentName,setAssignmentName]=React.useState("")
   const [AssignmentDescription,setAssignmentDescription]=React.useState("")
+  const id=useSelector(selectUpdateId)
   const input1=useCallback((e)=>{
     setAssignmentName(e.target.value)
   },[AssignmentName])
@@ -25,7 +28,8 @@ const AssignmentDetails = ({setModal}) => {
     axios.post(`http://localhost:5000/Assignment`,({
       title:AssignmentName,
       description:AssignmentDescription,
-      times:times
+      times:times,
+      id:id
     }),
     )
     setAssignmentName("")

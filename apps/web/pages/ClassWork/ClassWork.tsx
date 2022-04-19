@@ -5,10 +5,13 @@ import ClassWorkFeed from './ClassWorkFeed';
 import ClassWorkHeader from './ClassWorkHeader';
 import axios from 'axios';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectUpdateId } from '../features/ClassRoomList';
 const ClassWork = () => {
   const [data,setData]=useState([])
+  const id=useSelector(selectUpdateId)
   const getdata=async()=>{
-    await axios.get("http://localhost:5000/Assignment").then(res=>{
+    await axios.get(`http://localhost:5000/Assignment?id=${id}`).then(res=>{
           setData(res.data)
     }).catch(err=>{
       console.log(err)

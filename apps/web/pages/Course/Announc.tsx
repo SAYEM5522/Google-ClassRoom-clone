@@ -6,7 +6,7 @@ import styles from "../css/Course/Announce.module.css"
 import {useWindowSize} from "../useWindowSizw";
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import { selectImageUrl, selectName } from '../features/ClassRoomList';
+import { selectImageUrl, selectName, selectUpdateId } from '../features/ClassRoomList';
 import { v4 as uuidv4 } from 'uuid';
 const Announc = () => {
   const {width, height} = useWindowSize();
@@ -14,7 +14,8 @@ const Announc = () => {
   const [announce,setAnnounce]=useState("")
   const name=useSelector(selectName)
   const imgUrl=useSelector(selectImageUrl)
-  const id=uuidv4();
+  // const id=uuidv4();
+  const id=useSelector(selectUpdateId)
   const OnClick=useCallback(()=>{
         setOpen(true)
   },[open])
@@ -38,19 +39,19 @@ const times=todaysDate.toLocaleDateString('en-us', {  month: 'short', day: 'nume
     setAnnounce("")
  },[announce,name,times,imgUrl])
 
-  return <div className={styles.announce} style={{marginLeft:(width<900)?"-5%":"21.8%",
-  width:(width<900)?"105%":"76%",display:"flex",
+  return <div className={styles.announce} style={{marginLeft:(width<900)?"-5%":"210px",
+  width:(width<900)?"105%":"760px",display:"flex",
   height:(open?"240px":"72px"),
   flexDirection:"row",alignItems:"center",paddingLeft:"20px"}} >
     {
       open?
       <div>
-        {/* <div className={styles.announce__top}> */}
+        <div className={styles.announce__top}>
           <input 
            type={"text"} className={styles.announce__input}
            value={announce}
            onChange={textInput}  style={{width:"44rem",}} placeholder="Announce something to your class"/>
-        {/* </div> */}
+        </div>
         <div className={styles.announce__middle}>
             <p onClick={OnClick2}  className={styles.announce__middle1}>Cancle</p>
             <div  className={styles.announce__middle2}>
@@ -59,7 +60,9 @@ const times=todaysDate.toLocaleDateString('en-us', {  month: 'short', day: 'nume
         </div>
       </div>
       :
-      <div style={{flexDirection:"row",alignItems:"center",display:"flex"}} onClick={OnClick} >
+      <div
+      
+      style={{flexDirection:"row",alignItems:"center",display:"flex"}} onClick={OnClick} >
         <Image
             src={"/../public/avt6.jpg"}
             alt="Google"
