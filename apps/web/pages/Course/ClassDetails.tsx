@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 
 const ClassDetails = () => {
   const router = useRouter()
-  console.log("router name :",router.query.keyword);
+  
   // const classRoomListSubject=useSelector(selectCreateSubject)
   // const classRoomListSection=useSelector(selectCreateSection)
   // const classRoomListRoom=useSelector(selectCreateRoom)
